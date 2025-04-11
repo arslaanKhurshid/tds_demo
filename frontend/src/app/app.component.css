@@ -1,0 +1,240 @@
+/* Same as previous version */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  body.dark-theme header h1 {
+    color: #66b0ff;
+  }
+  
+  .theme-toggle button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle button:hover {
+    background-color: #0056b3;
+  }
+  
+  body.dark-theme .theme-toggle button {
+    background-color: #66b0ff;
+  }
+  
+  body.dark-theme .theme-toggle button:hover {
+    background-color: #4a8fe6;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .tabs button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .tabs button:hover:not(.active) {
+    background-color: #d0d0d0;
+  }
+  
+  body.dark-theme .tabs button {
+    background-color: #333;
+  }
+  
+  body.dark-theme .tabs button.active {
+    background-color: #66b0ff;
+  }
+  
+  body.dark-theme .tabs button:hover:not(.active) {
+    background-color: #444;
+  }
+  
+  .message {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .error {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .tab-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-theme .tab-content {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tab-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  body.dark-theme .action-btn {
+    background-color: #66b0ff;
+  }
+  
+  body.dark-theme .action-btn:hover {
+    background-color: #4a8fe6;
+  }
+  
+  .detect-form {
+    margin-bottom: 20px;
+  }
+  
+  .detect-form label {
+    margin-right: 10px;
+  }
+  
+  .detect-form select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+  body.dark-theme .detect-form select {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  td pre {
+    margin: 0;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+  }
+  
+  body.dark-theme th {
+    background-color: #3a3a3a;
+  }
+  
+  body.dark-theme td {
+    border-bottom: 1px solid #555;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .tabs button {
+      width: 100%;
+      border-radius: 4px;
+    }
+  
+    table {
+      font-size: 0.9rem;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  }
