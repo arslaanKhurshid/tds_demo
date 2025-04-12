@@ -1,18 +1,6 @@
-"fastapi\nuvicorn\npsycopg2-binary\npython-jose[cryptography]\npasslib[bcrypt]\ngroq\npyyaml" 
-asyncpg pyyaml
-
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-
-
-From your backend (app/api/ directory), the endpoints are:
-
-Logs Endpoints (app/api/logs.py):
-POST /logs/: Ingest a custom log.
-GET /logs/: Retrieve all logs.
-POST /logs/mock: Generate and store a mock log (already tested).
-Rules Endpoints (app/api/rules.py):
-POST /rules/generate: Generate a detection rule using Groq based on existing logs.
-GET /rules/: Retrieve all rules.
-Alerts Endpoints (app/api/alerts.py):
-POST /alerts/detect: Detect threats using a specific rule and generate alerts.
-GET /alerts/: Retrieve all alerts.
+fastapi==0.115.0
+uvicorn==0.30.6
+pydantic==2.9.2
+groq==0.11.0
+python-dotenv==1.0.1
+httpx==0.27.2

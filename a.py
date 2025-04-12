@@ -12,7 +12,7 @@ def read_python_files(src):
                 except Exception as e:
                     print(f"Error reading {file_path}: {e}")
 
-# Example usage:
+# Example usage:uvicorn app.main:app --host 0.0.0.0 --port 8000
 # Replace this with your actual source directory
 src_directory = 'C:\\Users\\arsla\\OneDrive\\Desktop\\collegeProj\\backend'
 read_python_files(src_directory)
